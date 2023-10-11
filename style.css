@@ -14,42 +14,51 @@ html {
   margin: 0;
   height: 100%;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
+h5 {
+  font-style: italic;
+  font-size: 85%;
+}
+
+h4 {
+  font-size: 115%;
+  display: inline
+}
+
+p a {
+  color: rgb(120, 120, 120);
+  text-decoration: none;
+}
+
+a {
+  color: rgb(65, 65, 65);
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+a:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
 
 /************ LANDING ************/
 
-h1 {
+.nameTitle {
   display: inline-block;
   padding-top: 8%;
   padding-bottom: 2%;
   color: rgb(65, 65, 65);
   text-decoration: none;
   position: relative;
+  transition: all 0.2s ease-in-out 0s;
 }
 
-h1:hover {
+.nameTitle:hover {
   color: rgb(0, 0, 0);
-  text-decoration: none;
-}
-
-h1::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0%;
-  left: 0%;
-  background-color: rgb(0, 0, 0);
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out 0s;
-}
-
-h1:hover::before {
-  visibility: visible;
-  transform: scaleX(1);
+  transition: all 0.2s ease-in-out 0s;
 }
 
 .landing {
@@ -70,23 +79,102 @@ h1:hover::before {
   mask-image: linear-gradient(to top, rgba(0,0,0,1) 50%, transparent 100%);
 }
 
-.landing div {
+/************ PIC & BIO COLUMNS ************/
+
+.column_pic {
+  float: left;
+  width: 40%;
+  max-width: 100%;
+  padding-top: 60px;
+  padding-left: 5%;
+  padding-right: 2%;
   text-align: center;
-  vertical-align: middle;
-  max-height: 20px;
-  width: 100%;
-  transition: all .2s ease-in-out;
 }
 
-.landing div a {
-  transition: all .2s ease-in-out;
+.column_bio {
+  float: left;
+  width: 53%;
+  max-width: 100%;
+  padding-top: 20px;
+  padding-left: 2%;
+  padding-right: 5%;
 }
 
-.landing div a:hover {
-  transition: all .2s ease-in-out;
-  transform: scale(1.1);
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
+.hide {
+  display: None;
+}
+
+.name {
+  text-align: center;
+}
+
+#profile_picture {
+  max-height: 600px;
+}
+
+/************ PROJECT TABLE ************/
+
+.name {
+  text-align: center;
+}
+
+.type {
+  display: inline;
+  font-size: 115%;
+  padding-left: 1%;
+  padding-right: 1%;
+  font-weight: 350;
+}
+
+.logo {
+  float: left;
+  width: 30%;
+  max-width: 100%;
+  padding-top: 5%;
+  padding-left: 10%;
+  padding-right: 2%;
+  text-align: center;
+}
+
+.description {
+  float: left;
+  width: 70%;
+  max-width: 100%;
+  padding-left: 2%;
+  padding-right: 10%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/************ MOBILE ************/
+
+@media screen and (max-width: 700px) {
+  .logo, .description {
+    width: 100%;
+    padding-top: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  .column_bio, .column_pic {
+    width: 100%;
+    padding-top: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  .column_bio {
+    padding-bottom: 15%;
+  }
+}
 
 /************ TOP NAV ************/
 
@@ -94,6 +182,7 @@ h1:hover::before {
   overflow: hidden;
   padding: 1% 15%;
   text-align: center;
+  transition: all 0.2s ease-in-out 0s;
 }
 
 .topnav a {
@@ -104,32 +193,17 @@ h1:hover::before {
   text-decoration: none;
   font-size: 17px;
   position: relative;
-}
-
-.topnav a::before {
-  content: "";
-  position: absolute;
-  width: 50%;
-  height: 1px;
-  bottom: 15%;
-  left: 25%;
-  background-color: rgb(0, 0, 0);
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out 0s;
-}
-
-.topnav a:hover::before {
-  visibility: visible;
-  transform: scaleX(1);
+  transition: all 0.2s ease-in-out 0s;
 }
 
 .topnav a:hover {
   color: rgb(0, 0, 0);
+  transition: all 0.2s ease-in-out 0s;
 }
 
-.topnav .current {
+.current {
   color: rgb(0, 0, 0);
+  opacity: 100%;
 }
 
 .icon {
@@ -139,4 +213,39 @@ h1:hover::before {
   width: 100%;
   max-width: 55px; 
   max-height: 55px;
+  opacity: 60%;
+}
+
+.icon:hover {
+  opacity: 100%;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.iconCurrent {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 100%;
+  max-width: 55px; 
+  max-height: 55px;
+}
+
+/************ FOOTER ************/
+
+.footer {
+  padding-top: 25px;
+  padding-bottom: 50px;
+}
+
+.mail {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 30px;
+  opacity: 40%;
+  text-decoration: none;
+}
+
+.mail:hover {
+  opacity: 100%;
+  transition: all 0.2s ease-in-out 0s;
 }
