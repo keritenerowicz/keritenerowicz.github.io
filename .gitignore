@@ -1,2 +1,3 @@
-*.js
 .tmp.driveupload/
+*DS_STORE
+*.txt
