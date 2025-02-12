@@ -1,0 +1,25 @@
+#footer {
+  padding: 2%;
+  text-align: center;
+}
+
+#icons {
+  display: flex;
+  justify-content: center;
+}
+
+.footerIcon {
+  fill: var(--link);
+  height: 20px;
+  width: 30px;
+  transition: 0.35s;
+}
+
+a:hover .footerIcon {
+  fill: var(--link-hover);
+}
+
+.footerText {
+  color: var(--link);
+  text-align: center;
+}

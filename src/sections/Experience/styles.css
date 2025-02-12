@@ -1,0 +1,12 @@
+section#experience h1 {
+  text-align: center;
+  font-size: var(--heading-font-size);
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 999px) {
+  section#experience h1 {
+    font-size: var(--mobile-heading-font-size);
+  }
+}
+
