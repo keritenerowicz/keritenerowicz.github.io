@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0.5% 0 0 1%;
+  margin: 5px 0 0 10px;
   position: fixed;
   height: 80px;
   background: transparent;
@@ -23,15 +23,15 @@
 
   .card {
     position: fixed;
-    right: calc(-3vw - 30px);
-    top: -2%;
+    right: -70px;
     width: 500px;
     height: 55px;
     background-color: white;
     border-radius: 50px;
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
-    margin: 2%;
+    margin: 25px;
     overflow: hidden;
+    transition: margin-right 0.3s ease, width 0.3s ease, height 0.3s ease;
   }
   
   .cardContent {
@@ -64,29 +64,48 @@
     }
   }
 
-  @media only screen and (max-width: 999px) {
+  @media only screen and (max-width: 800px) {
     .card {
-      right: calc(-3vw - 35px);
       border-radius: 30px;
-      top: 2%;
-      width: 170px;
-      height: 130px;
-      margin: 2%;
+      height: 55px;
+      top: -6px;
+      margin-right: -370px;
+
+      &.menuOpen {
+        width: 185px;
+        height: 160px;
+        margin-right: 35px;
+      }
     }
 
     .cardContent {
-      margin-left: -35px;
-      margin-top: -20px;
+      margin-left: -30px;
+      margin-top: -12px;
+    }
+
+    .hamburger {
+      display: flex;
+      cursor: pointer;
+      margin-top: 4px;
+      margin-left: 28px;
     }
 
     .navItems {
       display: flex;
       flex-direction: column;
-      gap: 3px;
+      gap: 8px;
       
       li {
         list-style: none;
       }
     }
+  }
+
+  .visible {
+    display: flex;
+  }
+
+  .hidden {
+    display: none;
   }
 }

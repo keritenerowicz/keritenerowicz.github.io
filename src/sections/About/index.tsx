@@ -1,16 +1,13 @@
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import './styles.css'
+import IntroCard from '../../components/Card/IntroCard';
+import HeaderTitle from '../../components/HeaderTitle';
 
 const About = () => (
   <section id='about'>
-    <h1>About</h1>
-    <Card className='card'>
-      <CardContent className='cardContent'>
-        <div className='title'>
-          👋 Hi, I'm Keri Tenerowicz!
-        </div>
-        <div className='body'>
+    <HeaderTitle name='About' />
+    <IntroCard
+      title={<>👋 Hi, I'm Keri Tenerowicz!</>}
+      text={
+        <>
           <p>I'm a software engineer at <a href="https://meraki.cisco.com/" target="_blank">Cisco Meraki</a>, and 
             my goal is to create software that makes a positive impact on the world.</p>
           <p>I graduated from Cornell University in 2023 with a BS in Computer Science. While at Cornell, I led the 
@@ -26,9 +23,9 @@ const About = () => (
             target="_blank">Minds Matter</a>. If you'd like to chat or learn more about what I'm up to, send me an 
             email at <a href="mailto:keri.tenerowicz@gmail.com" target="_blank">keri.tenerowicz@gmail.com</a> — I'd 
             love to hear from you! 💌</p>
-        </div>
-      </CardContent>
-    </Card>
+        </>
+      }
+    />
   </section>
 );
 

@@ -22,7 +22,7 @@ jobs:
           node-version: '23.5.0'
 
       - name: Install dependencies
-        run: yarn install
+        run: yarn cache clean && yarn --update-checksums && yarn install
 
       - name: Build project
         run: yarn build

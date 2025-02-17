@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 import ProfilePic from './sections/ProfilePic';
 import About from './sections/About';
 import Experience from './sections/Experience';
 import Projects from './sections/Projects';
-import Footer from './sections/Footer';
 import './styles.css';
 
 const App = () => {

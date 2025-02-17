@@ -1,0 +1,33 @@
+.footer {
+  padding: 20px;
+  background: radial-gradient(
+    ellipse,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0) 50%
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 450px 170px;
+
+  .icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footerIcon {
+    fill: var(--link);
+    height: 20px;
+    width: 30px;
+    transition: 0.3s;
+  }
+
+  a:hover .footerIcon {
+    fill: var(--link-hover);
+  }
+
+  .footerText {
+    color: var(--link);
+    text-align: center;
+  }
+}

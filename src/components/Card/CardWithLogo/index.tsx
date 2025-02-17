@@ -1,6 +1,6 @@
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import './styles.css';
+import '../styles.css';
 
 const CardWithLogo = ({ logo, title, org, link, text, date }: {
   logo: string;

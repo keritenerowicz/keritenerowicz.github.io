@@ -34,8 +34,10 @@ const ProfilePic = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const newScale = Math.max(minScale, 1 - (scrollPosition / maxScrollBeforeShrink) * 0.5);
-      setScale(newScale);
+      if (window.innerWidth >= 800) {
+        const newScale = Math.max(minScale, 1 - (scrollPosition / maxScrollBeforeShrink) * 0.5);
+        setScale(newScale);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);

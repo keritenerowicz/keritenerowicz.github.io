@@ -1,9 +1,10 @@
-import CardWithLogo from '../../components/CardWithLogo';
-import './styles.css'
+import CardWithLogo from '../../components/Card/CardWithLogo';
+import HeaderTitle from '../../components/HeaderTitle';
 
 const Projects = () => (
   <section id='projects'>
-    <h1>Projects</h1>
+    <HeaderTitle name='Projects' />
+
     <CardWithLogo
       logo='/logos/crc.png'
       title='Firmware team lead'
@@ -21,40 +22,56 @@ const Projects = () => (
         </>
       }
     />
+
     <CardWithLogo
       logo='/logos/cusail.png'
       title='Navigation team member'
       org='CUSail'
       link='https://cusail.engineering.cornell.edu/'
       date='2019 - 2021'
-      text="CUSail is an engineering project team that designs and manufactures an autonomous sailboat to compete 
-        in the SailBot International Robotic Sailboat Regatta. The boat competes in five events: Fleet Race, 
-        Endurance, Station Keeping, Precision Navigation, and Search. I worked on the boat's buoy detection, 
-        location, and navigation algorithms."
+      text={
+        <>
+          CUSail is an engineering project team that designs and manufactures an autonomous sailboat to compete 
+          in the SailBot International Robotic Sailboat Regatta. The boat competes in five events: Fleet Race, 
+          Endurance, Station Keeping, Precision Navigation, and Search. I worked on the boat's buoy detection, 
+          location, and navigation algorithms.
+        </>
+      }
     />
+
     <CardWithLogo
       logo='/logos/courseenroll.png'
       title='Solo dev'
       org='CourseEnroll'
       link='https://github.com/keritenerowicz/CourseEnroll'
       date='2022'
-      text="This program automates the enrollment process for Cornell's Student Center with Selenium in Python. 
-        It continually checks the student center webpage until enrollment opens, loops through the confirmation 
-        screens until the user is enrolled in all the chosen classes, then notifies the user when the process is 
-        complete. I undertook this project to learn about automation with Selenium in Python and to avoid the 
-        commotion of class enrollment periods."
+      text={
+        <>
+          This program automates the enrollment process for Cornell's Student Center with Selenium in Python. 
+          It continually checks the student center webpage until enrollment opens, loops through the confirmation 
+          screens until the user is enrolled in all the chosen classes, then notifies the user when the process is 
+          complete. I undertook this project to learn about automation with Selenium in Python and to avoid the 
+          commotion of class enrollment periods.
+        </>
+      }
     />
+
     <CardWithLogo
       logo='/logos/uno.png'
       title='Team member'
       org='UNO Game'
       link='https://github.com/SamRod33/UNO_Game'
       date='2021'
-      text='I worked on a team of four people to recreate the game UNO in OCaml. We designed a pass and play 
-        style game with both single player (against the computer) and multiplayer options. Notable features 
-        include an intermission screen when switching between players in a multiplayer game, which displayed 
-        the most recently played cards to the next player, and a keyboard navigation operated GUI.'
+      text={
+        <>
+          I worked on a team of four people to recreate the game UNO in OCaml. We designed a pass and play 
+          style game with both single player (against the computer) and multiplayer options. Notable features 
+          include an intermission screen when switching between players in a multiplayer game, which displayed 
+          the most recently played cards to the next player, and a keyboard navigation operated GUI.
+        </>
+      }
     />
+
     <CardWithLogo
       logo='/logos/honeybee.png'
       title='Solo dev'

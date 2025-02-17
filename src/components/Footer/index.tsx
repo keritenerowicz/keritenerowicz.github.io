@@ -17,8 +17,8 @@ const socialLinks = [
 ];
 
 const Footer = () => (
-  <section id='footer'>
-    <div id='icons'>
+  <div className='footer'>
+    <div className='icons'>
       {socialLinks.map(({ Icon, href }) => (
         <a key={href} href={href} target='_blank'>
           <Icon className='footerIcon' />
@@ -26,7 +26,7 @@ const Footer = () => (
       ))}
     </div>
     <p className='footerText'>© Keri Tenerowicz 2025</p>
-  </section>
+  </div>
 );
 
 export default Footer;
