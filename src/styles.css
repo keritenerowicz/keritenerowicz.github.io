@@ -1,0 +1,153 @@
+:root {
+  --text: black;
+  --highlight-text: white;
+  --link: rgb(255, 121, 144);
+  --link-hover: rgb(255, 57, 90);
+  --date-color: gray;
+
+  --heading-font-size: 50px;
+  --title-font-size: 35px;
+  --body-font-size: 18px;
+
+  --mobile-heading-font-size: 30px;
+  --mobile-title-font-size: 20px;
+  --mobile-body-font-size: 15px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  text-align: center;
+  font-size: var(--heading-font-size);
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  font-family: sans-serif;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+  background-image: url('/background.png');
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: 100vw;
+}
+
+.profileContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+
+  .profileCircle {
+    width: 80vmin;
+    height: 80vmin;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    transform-origin: center center;
+    will-change: transform;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .profileCircle::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .profileCircle:hover::after,
+  .profileCircle.show-overlay::after {
+    opacity: 1;
+  }
+
+  .profileImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: auto;
+  }
+
+  .profileText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--highlight-text);
+    font-size: 250%;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .profileCircle:hover .profileText,
+  .profileCircle.show-overlay .profileText {
+    opacity: 1;
+  }
+
+  .bounce-icon {
+    animation: simple-bounce 1.5s ease-in-out infinite;
+  }
+}
+
+.about {
+  scroll-margin-top: 80px;
+}
+
+.introBody {
+  padding: 20px;
+}
+
+@keyframes simple-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: var(--mobile-heading-font-size);
+  }
+
+  .introBody {
+    padding: 2%;
+  }
+}
