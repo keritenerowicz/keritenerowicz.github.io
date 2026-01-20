@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.{cmd,[cC][mM][dD]} text eol=crlf
+*.{bat,[bB][aA][tT]} text eol=crlf
+*.sln text eol=crlf
+*.{csproj,user,targets,nuspec,props} text eol=crlf
+*.{js,jsx,ts,tsx,json,html,css,scss,md,yml,yaml} text eol=lf
+*.{jpg,jpeg,png,gif,svg,ico,woff,woff2,ttf,eot} binary

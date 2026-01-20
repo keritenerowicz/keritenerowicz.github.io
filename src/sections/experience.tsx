@@ -1,14 +1,14 @@
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import ExperienceCard from '../components/Card';
+import GenericCard from 'src/components/Card';
 
 const Experience = () => (
-  <section id='experience'>
+  <section id='experience' aria-labelledby='experience-heading'>
     <Card className='card'>
       <CardContent className='cardContent'>
-        <h1>Experience</h1>
+        <h1 id='experience-heading'>Experience</h1>
 
-        <ExperienceCard
+        <GenericCard
           logo='/logos/meraki.png'
           org='Cisco Meraki'
           link='https://meraki.cisco.com/'
@@ -18,39 +18,23 @@ const Experience = () => (
               date: '2023 - Present',
               text: (
                 <>
-                  Currently working on the Meraki Dashboard and Vision Portal, two web applications that 
-                  allow users to manage their network and monitor their cameras.
+                  As a Software Engineer at Meraki, I led the modernization of the Camera pages on the Dashboard web application, transitioning legacy systems to React and RTK Query while achieving a 15-30 second reduction in page load times. I led end-to-end development for major initiatives like introducing a new camera model and extending the functionality of existing features, managing everything from functional specs to cross-team deployment. Beyond shipping code, I optimized team operations through automation, authored technical playbooks and documentation, and provided 1:1 mentorship to junior engineers.
                 </>
               )
             },
             {
               title: 'Software engineer intern',
-              date: 'Fall 2022',
+              date: 'Spring & Fall 2022',
               text: (
                 <>
-                  Implemented a popover tour framework using Intro.js in JavaScript with React to introduce 
-                  a user to new features of the website. Added testing for the feature and deployed it to 
-                  Vision Portal users via a Network Feature Override. Completed work on UI improvements, 
-                  streaming playback quality, and inconsistent browser errors.
-                </>
-              )
-            },
-            {
-              title: 'Software engineer intern',
-              date: 'Spring 2022',
-              text: (
-                <>
-                  Developed a polygon selection tool for camera views using React Redux, with data saved to 
-                  PostgreSQL and analyzed in Ruby on Rails. Deployed the tool to Meraki devices via a Network 
-                  Feature Override. Collaborated across the stack with developers, designers, and product 
-                  managers on the front end team.
+                  I collaborated across the stack with designers and PMs, optimized streaming playback quality, resolved browser-specific errors, and delivered UI improvements. In the Spring, I developed a polygon selection tool for camera views using React/Redux, Ruby on Rails, and PostgreSQL, deploying to Meraki devices via Network Feature Overrides. In the Fall, I built a user onboarding framework with Intro.js and React, implemented full testing suites, and deployed the feature to Vision Portal users.
                 </>
               )
             }
           ]}
         />
 
-        <ExperienceCard
+        <GenericCard
           logo='/logos/amazon.png'
           org='Amazon'
           link='https://www.aboutamazon.com/'
@@ -60,17 +44,14 @@ const Experience = () => (
               date: 'Summer 2022',
               text: (
                 <>
-                  Created a voice-activated prompt response for Alexa to say the time aloud 5 seconds 
-                  after an alarm starts ringing via sending notification topics between the cloud and Alexa devices.
-                  Configured the AWS services to the notification publishers and handlers in Java. Collaborated 
-                  with members of the Alexa Alarms team in an Agile environment.
+                  I built a voice-activated Alexa feature using Java and AWS to announce the time 5 seconds after an alarm triggers and configured cloud-to-device notification topics, managing publishers and handlers to ensure low-latency responses. Working in an Agile environment, I also collaborated with the Alexa Alarms team to bridge cloud services with physical hardware.
                 </>
               )
             }
           ]}
         />
         
-        <ExperienceCard
+        <GenericCard
           logo='/logos/ca.png'
           org='Curriculum Associates'
           link='https://www.curriculumassociates.com/'
@@ -80,8 +61,7 @@ const Experience = () => (
               date: 'Summer 2021',
               text: (
                 <>
-                  Implemented an automation tool to create Selenium tests for the interactive elements of 
-                  the Curriculum Associates website.
+                  I implemented an automation tool to create Selenium tests for the interactive elements of the Curriculum Associates website.
                 </>
               )
             }

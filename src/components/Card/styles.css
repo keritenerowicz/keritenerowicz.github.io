@@ -1,45 +1,78 @@
-section#experience .card, section#projects .card, section#about .card {
+/* Card Component Styles */
+
+/* Base card styles for all sections */
+section#experience .card,
+section#projects .card,
+section#about .card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 40px auto 80px;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  max-width: 90%;
   border-radius: 50px;
   box-shadow: 
     0 8px 25px rgba(0, 0, 0, 0.15),
     0 4px 10px rgba(0, 0, 0, 0.1);
-  margin: 40px 10% 80px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: white;
 
+  /* Inner card container */
   .insetCard {
-    padding-top: 50px;
-    box-shadow: inset 0 6px 20px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
     margin: 30px 20px;
-    padding: 30px 50px 50px;
+    padding: 30px 30px 50px 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset 0 6px 20px rgba(0, 0, 0, 0.15);
   }
 
+  /* Logo container */
   .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px auto 0;
+    margin: 10px 0 0;
+    width: 100%;
     
     img {
-      width: auto;
-      height: 100px;
+      width: 150px;
+      height: auto;
     }
   }
 
-  .cardContent {
-    margin: 20px;
+  /* Experience layout container */
+  .experienceContainer {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1;
   }
 
+  /* Experience logo section */
+  .experienceLogo {
+    width: 20%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Experience text section */
+  .experienceText {
+    width: 80%;
+    flex-shrink: 0;
+    min-height: 120px;
+  }
+
+  /* Title styles */
   .title {
     text-align: left;
     font-size: var(--title-font-size);
     margin-bottom: 20px;
   }
   
+  /* Title and date container */
   .titleDate {
     display: flex;
     justify-content: space-between;
@@ -48,6 +81,7 @@ section#experience .card, section#projects .card, section#about .card {
   
     .title {
       margin-right: 20px;
+      align-items: center;
     }
   
     .date {
@@ -59,6 +93,7 @@ section#experience .card, section#projects .card, section#about .card {
     }
   }
 
+  /* Body text styles */
   .body {
     text-align: left;
     font-size: var(--body-font-size);
@@ -66,29 +101,41 @@ section#experience .card, section#projects .card, section#about .card {
     i {
       color: var(--date-color);
     }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
   }
 
-  @media only screen and (max-width: 800px) {
+  /* Mobile responsive styles */
+  @media only screen and (max-width: 900px) {
     margin: 40px 4% 50px;
+    padding: 1%;
     
     .insetCard {
       margin: 30px 1px;
       padding: 15px 20px 25px;
+      min-height: 200px;
     }
     
     .logo {
       margin-top: 5px;
+      
       img {
+        width: auto;
         height: 65px;
       }
     }
 
-    .cardContent {
-      margin: 2%;
+    .experienceContainer {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .experienceLogo {
+      width: 100px;
+    }
+
+    .experienceText {
+      width: 100%;
+      text-align: center;
     }
 
     .title {
@@ -96,18 +143,32 @@ section#experience .card, section#projects .card, section#about .card {
     }
 
     .titleDate {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      
       .title {
-        margin-right: 10px;
+        margin-right: 20px;
+        text-align: left;
+        align-items: center;
       }
 
-      .date  {
+      .date {
         font-size: var(--mobile-body-font-size);
-        min-width: 55px;
+        min-width: auto;
+        text-align: right;
+        margin-left: auto;
       }
     }
 
-    .body  {
+    .body {
       font-size: var(--mobile-body-font-size);
     }
   }
+}
+
+/* Section-specific overrides */
+section#projects .card {
+  margin: 40px auto 40px;
 }
