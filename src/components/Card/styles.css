@@ -172,3 +172,7 @@ section#about .card {
 section#projects .card {
   margin: 40px auto 40px;
 }
+
+section#about .card {
+  margin: 0 auto;
+}
