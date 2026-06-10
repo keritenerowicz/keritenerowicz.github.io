@@ -1,0 +1,69 @@
+/* Component Styles */
+/* Reusable component styles and section-specific overrides */
+
+/* Icon Component */
+.footerIcon {
+  fill: var(--link);
+  transition: fill 0.3s ease;
+}
+
+a:hover .footerIcon {
+  fill: var(--link-hover);
+}
+
+/* About Section Component */
+.about {
+  scroll-margin-top: 80px;
+  padding-top: 50px;
+}
+
+/* Desktop-specific vertical centering */
+@media (min-width: 901px) {
+  .about {
+    padding-top: 0;
+  }
+}
+
+/* Remove card shadow for about section */
+.section#about .card .insetCard {
+  box-shadow: none;
+}
+
+/* About section icon container */
+.about .icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+/* About section footer icons */
+.about .footerIcon {
+  height: 24px;
+  width: 36px;
+}
+
+/* About section profile container */
+.about .profileContainer {
+  min-height: auto;
+  width: 100%;
+}
+
+/* About section profile circle */
+.about .profileCircle {
+  width: min(300px, 75vw);
+  height: min(300px, 75vw);
+  max-width: 100%;
+}
+
+/* Mobile Responsive for About Component */
+@media (max-width: 900px) {
+  #about.about {
+    padding-top: 20px;
+  }
+
+  .about .icons {
+    gap: 5px;
+  }
+}

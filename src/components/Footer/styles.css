@@ -1,3 +1,5 @@
+/* Footer Component Styles */
+
 .footer {
   padding: 20px;
   background: radial-gradient(
@@ -10,22 +12,19 @@
   background-repeat: no-repeat;
   background-size: 450px 170px;
 
+  /* Icon container */
   .icons {
     display: flex;
     justify-content: center;
   }
 
+  /* Individual footer icon */
   .footerIcon {
-    fill: var(--link);
     height: 20px;
     width: 30px;
-    transition: 0.3s;
   }
 
-  a:hover .footerIcon {
-    fill: var(--link-hover);
-  }
-
+  /* Footer text */
   .footerText {
     color: var(--link);
     text-align: center;

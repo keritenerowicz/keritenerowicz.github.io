@@ -1,36 +1,31 @@
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import ExperienceCard from '../components/Card';
+import GenericCard from 'src/components/Card';
 
 const Projects = () => (
-  <section id='projects'>
+  <section id='projects' aria-labelledby='projects-heading'>
     <Card className='card'>
       <CardContent className='cardContent'>
-        <h1>Projects</h1>
+        <h1 id='projects-heading'>Projects</h1>
 
-        <ExperienceCard
+        <GenericCard
           logo='/logos/crc.png'
           org='Combat Robotics at Cornell'
           link='https://combatrobotics.engineering.cornell.edu/'
           experiences={[
             {
-              title: 'Firmware team lead',
+              title: 'Software team lead',
               date: '2019 - 2021',
               text: (
                 <>
-                  CRC creates a few different robots each year and competes in the Rage in the Cage competition. 
-                  The firmware subteam most recently worked on a sportsman bot in collaboration with one of the mechanical 
-                  engineering subteams. This is a fully autonomous robot that attacks a robot opponent with the goal of 
-                  destroying it and pushing it out of the arena. In the past, we've also worked on a <a 
-                    href='https://www.youtube.com/watch?v=6lZtq3UJguw' target='_blank' rel='noopener noreferrer'>sumobot</a> with 
-                  the primary goal of pushing its opponent out of the ring.
+                  CRC creates a few different robots each year and competes in the Rage in the Cage competition. We created a <a href='https://www.youtube.com/watch?v=6lZtq3UJguw' target='_blank' rel='noopener noreferrer'>sumobot</a> in collaboration with the mechianical engineering team, whose primary goal was to push its opponent out of the ring. We chose sensors to detect other robots, read signals, and sent movement commands to the motors.
                 </>
               )
             }
           ]}
         />
 
-        <ExperienceCard
+        <GenericCard
           logo='/logos/cusail.png'
           org='CUSail'
           link='https://cusail.engineering.cornell.edu/'
@@ -40,17 +35,14 @@ const Projects = () => (
               date: '2019 - 2021',
               text: (
                 <>
-                  CUSail is an engineering project team that designs and manufactures an autonomous sailboat to compete 
-                  in the SailBot International Robotic Sailboat Regatta. The boat competes in five events: Fleet Race, 
-                  Endurance, Station Keeping, Precision Navigation, and Search. I worked on the boat's buoy detection, 
-                  location, and navigation algorithms.
+                  CUSail is an engineering project team that designs and manufactures an autonomous sailboat to compete in the SailBot International Robotic Sailboat Regatta. I worked on the boat's buoy detection, location, and navigation algorithms using CV2 in Python.
                 </>
               )
             }
           ]}
         />
 
-        <ExperienceCard
+        <GenericCard
           logo='/logos/courseenroll.png'
           org='CourseEnroll'
           link='https://github.com/keritenerowicz/CourseEnroll'
@@ -59,37 +51,14 @@ const Projects = () => (
               date: '2022',
               text: (
                 <>
-                  This program automates the enrollment process for Cornell's Student Center with Selenium in Python. 
-                  It continually checks the student center webpage until enrollment opens, loops through the confirmation 
-                  screens until the user is enrolled in all the chosen classes, then notifies the user when the process is 
-                  complete. I undertook this project to learn about automation with Selenium in Python and to avoid the 
-                  commotion of class enrollment periods.
+                  Developed an automated enrollment tool for Cornell's Student Center using Python and Selenium. The program monitors real-time enrollment status, executes automated multi-step confirmation loops for class registration, and provides completion notifications. This project was designed to streamline the registration process and master browser automation techniques.
                 </>
               )
             }
           ]}
         />
 
-        <ExperienceCard
-          logo='/logos/uno.png'
-          org='UNO Game'
-          link='https://github.com/SamRod33/UNO_Game'
-          experiences={[
-            {
-              date: '2021',
-              text: (
-                <>
-                  I worked on a team of four people to recreate the game UNO in OCaml. We designed a pass and play 
-                  style game with both single player (against the computer) and multiplayer options. Notable features 
-                  include an intermission screen when switching between players in a multiplayer game, which displayed 
-                  the most recently played cards to the next player, and a keyboard navigation operated GUI.
-                </>
-              )
-            }
-          ]}
-        />
-
-        <ExperienceCard
+        <GenericCard
           logo='/logos/honeybee.png'
           org='Honeybee Predictions'
           link='https://github.com/keritenerowicz/honeybee_predictions'

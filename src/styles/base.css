@@ -1,0 +1,50 @@
+/* Base Styles */
+/* CSS Variables and global element styles */
+
+:root {
+  /* Colors */
+  --text: black;
+  --link: rgb(255, 121, 144);
+  --link-hover: rgb(255, 57, 90);
+  --date-color: gray;
+
+  /* Font Sizes */
+  --heading-font-size: 50px;
+  --title-font-size: 35px;
+  --body-font-size: 18px;
+
+  /* Mobile Font Sizes */
+  --mobile-heading-font-size: 30px;
+  --mobile-title-font-size: 20px;
+  --mobile-body-font-size: 15px;
+}
+
+/* Base HTML Elements */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  font-family: sans-serif;
+}
+
+/* Typography */
+h1 {
+  text-align: center;
+  font-size: var(--heading-font-size);
+  margin: 15px 0 30px;
+}
+
+/* Links */
+a {
+  color: var(--link);
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
